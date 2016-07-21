@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+body {
+  margin: 0;
+}
+header {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding-top: 1.5em;
+}
+#coury {
+  border-right: 2px solid;
+}
+#coury a {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: #000;
+  font-size: 50px;
+  padding: 0 1em;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  margin: 0 1em;
+  display: inline-block;
+}
+ul li a {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+ul li a:hover {
+  text-decoration: underline;
+}

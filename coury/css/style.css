@@ -1,0 +1,300 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
+}
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  #bgvid { display: none; }
+}
+a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+#coury-ry a {
+  position: fixed;
+  z-index: 1;
+  margin: 25px 50px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  font-size: 50px;
+  border-right: 2px solid;
+  padding-right: 32px;
+  padding-bottom: 10px;
+}
+.ha-header ul {
+  position: fixed;
+  z-index: 1;
+  top: 23px;
+  left: 178px;
+  list-style-type: none;
+}
+.ha-header li {
+  display: inline;
+}
+.ha-header ul li a {
+  padding: 10px 20px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 18px;
+ }
+ .ha-header ul li a:hover {
+  text-decoration: underline;
+ }
+ .content {
+  position: absolute;
+  top: 250px;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+ }
+ .content #desc {
+  width: 100%;
+  text-align: center;
+  font-size: 64px;
+ }
+ .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+ }
+ .buttons button {
+  display: inline-block;
+  overflow: hidden;
+  width: 200px;
+  margin: 1em;
+  padding: 1em 2em;
+  font-family: 'Oswald', sans-serif;
+  border: 1px solid black;
+  background: none;
+  color: inherit;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: border-color 0.3s, color 0.3s;
+  transition: border-color 0.3s, color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.buttons button:focus {
+  outline: none;
+}
+.buttons button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: #37474f;
+  z-index: -1;
+  -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+  transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+  -webkit-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.buttons button:hover {
+  color: #fff;
+  border-color: #000;
+}
+.buttons button:hover::before {
+  opacity: 1;
+  background-color: #000;
+  -webkit-transform: rotate3d(0, 0, 1, 0deg);
+  transform: rotate3d(0, 0, 1, 0deg);
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.social {
+  position: absolute;
+  top: 68%;
+  right: 0;
+  height: 100px;
+  width: 50px;
+}
+.social a {
+  opacity: 0.8;
+  margin: 10px;
+  cursor: pointer;
+}
+.social a:hover {
+  opacity: 1;
+}
+.course {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.tabs {
+  opacity: 0;
+  visibility: visible;
+  height: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+.tabs.viewed {
+  opacity: 1;
+  height: 100%;
+}
+.canvas {
+  height: 800px;
+}
+.animation-element {
+  position: relative;
+  top: 100px;
+  left: 31px;
+  height: 250px;
+  width: 30%;
+  margin: 12px;
+  float: left;
+  background-color: #fff;
+}
+.animation-element:nth-of-type(3n-2) {
+  clear: left;
+}
+.animation-element:nth-of-type(3n-1) {
+}
+.animation-element:nth-of-type(3n-0) {
+  clear: right;
+}
+.bounce-up {
+  visibility: hidden;
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.bounce-up.viewed {
+  visibility: visible;
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+.tabs ul {
+  position: absolute;
+  top: 40px;
+  right: 191px;
+  padding: 0;
+  height: 50px;
+  list-style-type: none;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
+}
+.tabs ul::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.tabs ul #line {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  border-bottom: 1px solid #e5e5e2;
+}
+.tabs ul li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  border-top: 1px solid #e5e5e2;
+  border-bottom: 1px solid #e5e5e2;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.tabs ul li:nth-child(2) {
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  border-left: 1px solid #e5e5e2;
+  border-right: 1px solid #e5e5e2;
+}
+.tabs ul li:last-child {
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px;
+  border-left: 1px solid #e5e5e2;
+  border-right: 1px solid #e5e5e2;
+}
+.tabs ul li a {
+  display: block;
+  padding: 1em;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  font-size: 0.85em;
+  color: #6a6a6a;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.tabs ul .ui-tabs-active {
+  background: #fff;
+  border-bottom: none;
+}
+.tabs ul .ui-tabs-active a {
+  color: #000;
+}
+#info {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+#info:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+.animation-element img {
+  position: absolute;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
